@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precios | Turismo</title>
+  <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="../index.html">Turismo<span>UNJu</span></a>
+      <nav aria-label="Menú principal">
+        <ul class="main-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./destinos.html">Destinos</a></li>
+          <li><a href="./agencias.html">Agencias</a></li>
+          <li><a href="./precios.html">Precios</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><button class="theme-toggle" type="button" aria-label="Cambiar tema">Dark / Light</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-banner">
+      <h1>Comparador de destinos</h1>
+      <p>Comparativa de precios y servicios diseñada para ayudarte a elegir el paquete ideal para tu próxima aventura.</p>
+    </section>
+
+    <section class="price-grid-wrapper" data-reveal>
+      <div class="price-grid">
+        <article class="price-card featured">
+          <span class="price-badge">Mejor opción</span>
+          <h3>Plan Escapada</h3>
+          <strong>$220</strong>
+          <p>Viaje corto de fin de semana con traslados incluidos.</p>
+          <ul>
+            <li class="tooltip" tabindex="0" data-tooltip="Incluye guía bilingüe en todos los destinos">Guía experto</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Alojamiento en 3 estrellas con desayuno diario">Alojamiento</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Transporte de ida y vuelta desde la ciudad principal">Transporte</li>
+          </ul>
+          <button class="cta-button">Elegir</button>
+        </article>
+
+        <article class="price-card">
+          <h3>Plan Aventurero</h3>
+          <strong>$320</strong>
+          <p>Ruta de naturaleza con trekking, kayak y actividades al aire libre.</p>
+          <ul>
+            <li class="tooltip" tabindex="0" data-tooltip="Seguro de viaje y equipo básico incluidos">Seguro</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Comidas locales en cada jornada">Pensión completa</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Grupos reducidos de hasta 6 personas">Grupo reducido</li>
+          </ul>
+          <button class="cta-button">Elegir</button>
+        </article>
+
+        <article class="price-card">
+          <h3>Plan Premium</h3>
+          <strong>$420</strong>
+          <p>Experiencia completa con hotel superior y actividades personalizadas.</p>
+          <ul>
+            <li class="tooltip" tabindex="0" data-tooltip="Acceso ilimitado a museos y sitios exclusivos">Entradas</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Servicio de concierge 24/7 durante el viaje">Atención premium</li>
+            <li class="tooltip" tabindex="0" data-tooltip="Traslado privado desde y hacia el aeropuerto">Traslados vip</li>
+          </ul>
+          <button class="cta-button">Elegir</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="table-section" data-reveal>
+      <div class="section-title">
+        <span>Comparación clara</span>
+        <h2>Análisis de paquetes</h2>
+        <p>Compara rápidamente precios, servicios y beneficios para elegir el destino ideal.</p>
+      </div>
+      <div class="table-panel">
+        <table class="destino-table">
+          <caption>Comparativa de packs de destino</caption>
+          <thead>
+            <tr>
+              <th scope="col">Característica</th>
+              <th scope="col">Escapada</th>
+              <th scope="col">Aventurero</th>
+              <th scope="col">Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Precio</th>
+              <td>$220</td>
+              <td>$320</td>
+              <td>$420</td>
+            </tr>
+            <tr>
+              <th scope="row">Duración</th>
+              <td>2-3 días</td>
+              <td>4-5 días</td>
+              <td>7+ días</td>
+            </tr>
+            <tr>
+              <th scope="row">Alojamiento</th>
+              <td>Hotel 3★ + desayuno</td>
+              <td>Cabañas rurales + desayuno</td>
+              <td>Hotel 5★ + desayuno premium</td>
+            </tr>
+            <tr>
+              <th scope="row">Actividades</th>
+              <td>Tour guiado + city tour</td>
+              <td>Kayak, trekking y excursiones</td>
+              <td>Experiencias exclusivas y spa</td>
+            </tr>
+            <tr>
+              <th scope="row">Transporte</th>
+              <td>Traslados en grupo</td>
+              <td>Transporte compartido + equipo</td>
+              <td>Traslado privado VIP</td>
+            </tr>
+            <tr>
+              <th scope="row">Ideal para</th>
+              <td>Parejas y escapadas cortas</td>
+              <td>Aventureros y grupos jóvenes</td>
+              <td>Clientes que buscan comodidad total</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-box">
+        <h4>Comparador</h4>
+        <p>Selecciona el paquete ideal con claridad y sin confusión.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Links rápidos</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./destinos.html">Destinos</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">TW</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>

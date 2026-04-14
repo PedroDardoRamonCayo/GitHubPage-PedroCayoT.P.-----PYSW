@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos | Turismo</title>
+  <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <a class="brand" href="../index.html">Turismo<span>UNJu</span></a>
+      <nav aria-label="Menú principal">
+        <ul class="main-nav">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./destinos.html">Destinos</a></li>
+          <li><a href="./agencias.html">Agencias</a></li>
+          <li><a href="./precios.html">Precios</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><button class="theme-toggle" type="button" aria-label="Cambiar tema">Dark / Light</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-banner">
+      <h1>Explora destinos únicos</h1>
+      <p>Encuentra tu próximo viaje de aventura, cultura, playa o gastronomía y elige según tu estilo de viaje.</p>
+    </section>
+
+    <section>
+      <input type="radio" id="category-all" name="category" checked>
+      <input type="radio" id="category-cultural" name="category">
+      <input type="radio" id="category-nature" name="category">
+      <input type="radio" id="category-beach" name="category">
+      <input type="radio" id="category-food" name="category">
+      <input type="radio" id="category-religious" name="category">
+
+      <div class="filter-tabs" aria-label="Filtrar destinos">
+        <label for="category-all">Todos</label>
+        <label for="category-cultural">Cultural</label>
+        <label for="category-nature">Naturaleza</label>
+        <label for="category-beach">Sol y Playa</label>
+        <label for="category-food">Gastronómico</label>
+        <label for="category-religious">Religioso</label>
+      </div>
+
+      <div class="destino-grid cards-grid" aria-live="polite">
+        <article class="card" data-category="cultural">
+          <img src="../Img/2.jpg" alt="Templo histórico cultural">
+          <div class="card-content">
+            <span class="badge">Cultural</span>
+            <h3>Jujuy Colonial</h3>
+            <p>Descubre iglesias, museos y tradiciones en un recorrido patrimonial.</p>
+          </div>
+        </article>
+        <article class="card" data-category="naturaleza">
+          <img src="../Img/3.jpg" alt="Paisaje natural de montaña">
+          <div class="card-content">
+            <span class="badge">Naturaleza</span>
+            <h3>Cumbres del Norte</h3>
+            <p>Senderismo entre valles, cascadas y miradores con vistas infinitas.</p>
+          </div>
+        </article>
+        <article class="card" data-category="sol-playa">
+          <img src="../Img/5.jpg" alt="Playa paradisíaca de sol y arena">
+          <div class="card-content">
+            <span class="badge">Sol y Playa</span>
+            <h3>Riviera del Sol</h3>
+            <p>Relájate en playas doradas con actividades acuáticas premium.</p>
+          </div>
+        </article>
+        <article class="card" data-category="gastronomico">
+          <img src="../Img/4.jpg" alt="Platos típicos gastronómicos">
+          <div class="card-content">
+            <span class="badge">Gastronómico</span>
+            <h3>Sabores del Mundo</h3>
+            <p>Saborea experiencias culinarias en mercados y restaurantes boutique.</p>
+          </div>
+        </article>
+        <article class="card" data-category="religioso">
+          <img src="../Img/6.jpg" alt="Arte religioso y arquitectura sacra">
+          <div class="card-content">
+            <span class="badge">Religioso</span>
+            <h3>Peregrinaje Serene</h3>
+            <p>Recorre santuarios históricos y celebra tradiciones profundas.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <span class="section-caption">Galería</span>
+        <h2>Exploración visual de destinos destacados</h2>
+        <p>Galería de momentos y paisajes que te invita a imaginar cada destino.</p>
+      </div>
+      <div class="masonry-grid">
+        <article class="item-tall"><img src="../Img/7.jpg" alt="Paisaje vibrante"></article>
+        <article><img src="../Img/8.jpg" alt="Río entre montañas"></article>
+        <article class="item-tall"><img src="../Img/9.jpg" alt="Camino cultural"></article>
+        <article><img src="../Img/10.jpg" alt="Playa escondida"></article>
+        <article><img src="../Img/1.jpg" alt="Atardecer en la ciudad"></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>Comparativa y tarifas flexibles</h2>
+        <p>Comparativa clara de paquetes y destinos para facilitar tu elección de viaje.</p>
+      </div>
+      <table class="destino-table">
+        <thead>
+          <tr>
+            <th>Destino</th>
+            <th>Duración</th>
+            <th>Precio</th>
+            <th>Estilo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Destino">Ruta del Vino</td>
+            <td data-label="Duración">4 días</td>
+            <td data-label="Precio">$320 USD</td>
+            <td data-label="Estilo">Gastronómico</td>
+          </tr>
+          <tr>
+            <td data-label="Destino">Valle Encantado</td>
+            <td data-label="Duración">5 días</td>
+            <td data-label="Precio">$280 USD</td>
+            <td data-label="Estilo">Naturaleza</td>
+          </tr>
+          <tr>
+            <td data-label="Destino">Costa Dorada</td>
+            <td data-label="Duración">3 días</td>
+            <td data-label="Precio">$240 USD</td>
+            <td data-label="Estilo">Sol y Playa</td>
+          </tr>
+          <tr>
+            <td data-label="Destino">Caminos Santos</td>
+            <td data-label="Duración">6 días</td>
+            <td data-label="Precio">$360 USD</td>
+            <td data-label="Estilo">Religioso</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-box">
+        <h4>Sobre Turismo</h4>
+        <p>Encuentra inspiración para tu próximo viaje con ideas de destinos, rutas y experiencias auténticas.</p>
+      </div>
+      <div class="footer-box">
+        <h4>Enlaces</h4>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./agencias.html">Agencias</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-box">
+        <h4>Mapa</h4>
+        <div class="footer-map">
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-68.3735%2C-24.1964%2C-65.1530%2C-21.3256&layer=mapnik" loading="lazy" title="Mapa de destinos" aria-label="Mapa interactivo"></iframe>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/main.js" defer></script>
+</body>
+</html>
