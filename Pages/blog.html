@@ -3,145 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog de Destinos | Turismo</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <title>Blog de Destinos | Turismo UNJu</title>
+  <link rel="stylesheet" href="../Css/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="../scripts/jquery-4.0.0.min.js"></script>
+  <script src="../Css/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/main.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="brand" href="../index.html">Turismo<span>UNJu</span></a>
-      <nav aria-label="Menú principal">
-        <ul class="main-nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./destinos.html">Destinos</a></li>
-          <li><a href="./agencias.html">Agencias</a></li>
-          <li><a href="./precios.html">Precios</a></li>
-          <li><a href="./blog.html" aria-current="page">Blog</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><button class="theme-toggle" type="button" aria-label="Cambiar tema">Dark / Light</button></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="fas fa-plane"></i> Turismo <span>UNJu</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./agencias.html"><i class="fas fa-building"></i> Agencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./precios.html"><i class="fas fa-dollar-sign"></i> Precios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./blog.html"><i class="fas fa-blog"></i> Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+          </li>
         </ul>
-      </nav>
+        <button class="theme-toggle btn btn-outline-light ms-3" type="button" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container sections-snap page-blog">
-    <section class="page-banner article-banner" aria-labelledby="blog-title">
-      <div class="banner-copy">
+  <main class="container my-5">
+    <section class="page-banner article-banner row g-4 mb-5" aria-labelledby="blog-title">
+      <div class="banner-copy col-lg-8">
         <span class="hero-caption" aria-hidden="true">Edición especial</span>
         <h1 id="blog-title">Blog de destinos</h1>
         <p>Revista de viajes con relatos inmersivos, consejos de destinos y recomendaciones para turistas curiosos.</p>
         <div class="banner-actions">
-          <a href="./contacto.html" class="cta-button">Quiero mi viaje</a>
-          <a href="./precios.html" class="cta-button secondary">Ver comparador</a>
+          <a href="./contacto.html" class="btn btn-primary me-2">Quiero mi viaje</a>
+          <a href="./precios.html" class="btn btn-secondary">Ver comparador</a>
         </div>
       </div>
-      <aside class="banner-side" aria-label="Datos destacados">
-        <div class="banner-tag">Tendencias 2026</div>
-        <p>Explorá destinos únicos con un diseño que recuerda a una revista de viajes moderna.</p>
-        <div class="banner-stats">
-          <div><strong>120+</strong> relatos</div>
-          <div><strong>24</strong> rutas probadas</div>
+      <aside class="banner-side col-lg-4" aria-label="Datos destacados">
+        <div class="card p-3">
+          <div class="banner-tag badge bg-primary mb-2">Tendencias 2026</div>
+          <p>Explorá destinos únicos con un diseño que recuerda a una revista de viajes moderna.</p>
+          <div class="banner-stats">
+            <div><strong>120+</strong> relatos</div>
+            <div><strong>24</strong> rutas probadas</div>
+          </div>
         </div>
       </aside>
     </section>
 
-    <section class="category-panel" aria-labelledby="filter-title">
-      <div class="section-title">
+    <section class="category-panel mb-5" aria-labelledby="filter-title">
+      <div class="section-title text-center mb-4">
         <h2 id="filter-title">Filtrar por categoría</h2>
         <p>Seleccioná un tema y el blog mostrará solo los artículos relacionados.</p>
       </div>
-      <div class="category-tags" role="group" aria-label="Categorías del blog">
-        <input type="radio" id="filter-all" name="category-filter" checked hidden>
-        <label for="filter-all" class="category-pill">Todos</label>
-        <input type="radio" id="filter-cultura" name="category-filter" hidden>
-        <label for="filter-cultura" class="category-pill">Cultura</label>
-        <input type="radio" id="filter-naturaleza" name="category-filter" hidden>
-        <label for="filter-naturaleza" class="category-pill">Naturaleza</label>
-        <input type="radio" id="filter-playa" name="category-filter" hidden>
-        <label for="filter-playa" class="category-pill">Playa</label>
-        <input type="radio" id="filter-gourmet" name="category-filter" hidden>
-        <label for="filter-gourmet" class="category-pill">Gourmet</label>
+      <div class="category-tags d-flex justify-content-center flex-wrap mb-4" role="group" aria-label="Categorías del blog">
+        <button class="btn btn-outline-primary mx-1 filter-category active" data-category="all">Todos</button>
+        <button class="btn btn-outline-primary mx-1 filter-category" data-category="cultura">Cultura</button>
+        <button class="btn btn-outline-primary mx-1 filter-category" data-category="naturaleza">Naturaleza</button>
+        <button class="btn btn-outline-primary mx-1 filter-category" data-category="playa">Playa</button>
+        <button class="btn btn-outline-primary mx-1 filter-category" data-category="gourmet">Gourmet</button>
       </div>
 
-      <div class="newspaper-grid" aria-label="Artículos del blog">
-        <article class="blog-post playa" data-reveal>
-        <div class="post-image-wrap">
-          <img src="../Img/5.jpg" alt="Vista de playa escondida" class="post-image">
-          <span class="post-badge">Destacado</span>
+      <div class="newspaper-grid row g-4" aria-label="Artículos del blog">
+        <div class="col-lg-6">
+          <article class="blog-post card playa" data-category="playa">
+            <img src="../Img/5.jpg" class="card-img-top" alt="Vista de playa escondida">
+            <div class="card-body">
+              <span class="badge bg-info">Playa</span>
+              <h5 class="card-title">Escapada a playas escondidas</h5>
+              <p class="card-text">Un paseo exclusivo por bahías secretas donde el mar turquesa se mezcla con el confort boutique.</p>
+              <div class="meta text-muted"><span>Travel</span><span>4 min</span></div>
+            </div>
+          </article>
         </div>
-        <div class="post-body">
-          <span class="tag-pill">Playa</span>
-          <h2>Escapada a playas escondidas</h2>
-          <p>Un paseo exclusivo por bahías secretas donde el mar turquesa se mezcla con el confort boutique.</p>
-          <div class="meta"><span>Travel</span><span>4 min</span></div>
-        </div>
-      </article>
 
-      <article class="blog-post cultura" data-reveal>
-        <div class="post-image-wrap small">
-          <img src="../Img/4.jpg" alt="Mercado local de gastronomía" class="post-image">
+        <div class="col-lg-3 col-md-6">
+          <article class="blog-post card cultura" data-category="gourmet">
+            <img src="../Img/4.jpg" class="card-img-top" alt="Mercado local de gastronomía">
+            <div class="card-body">
+              <span class="badge bg-warning">Gourmet</span>
+              <h5 class="card-title">Sabores auténticos en mercados locales</h5>
+              <p class="card-text">Descubrí platos tradicionales, bebidas típicas y los mejores sitios para una ruta gourmet.</p>
+              <div class="meta text-muted"><span>Cultura</span><span>5 min</span></div>
+            </div>
+          </article>
         </div>
-        <div class="post-body">
-          <span class="tag-pill">Gourmet</span>
-          <h2>Sabores auténticos en mercados locales</h2>
-          <p>Descubrí platos tradicionales, bebidas típicas y los mejores sitios para una ruta gourmet.</p>
-          <div class="meta"><span>Cultura</span><span>5 min</span></div>
-        </div>
-      </article>
 
-      <article class="blog-post naturaleza" data-reveal>
-        <div class="post-image-wrap small">
-          <img src="../Img/6.jpg" alt="Sendero natural en montaña" class="post-image">
+        <div class="col-lg-3 col-md-6">
+          <article class="blog-post card naturaleza" data-category="naturaleza">
+            <img src="../Img/6.jpg" class="card-img-top" alt="Sendero natural en montaña">
+            <div class="card-body">
+              <span class="badge bg-success">Naturaleza</span>
+              <h5 class="card-title">Rutas verdes e inmersión rural</h5>
+              <p class="card-text">Consejos para planificar caminatas seguras, observar fauna y desconectarte en entornos naturales.</p>
+              <div class="meta text-muted"><span>Aventura</span><span>4 min</span></div>
+            </div>
+          </article>
         </div>
-        <div class="post-body">
-          <span class="tag-pill">Naturaleza</span>
-          <h2>Rutas verdes e inmersión rural</h2>
-          <p>Consejos para planificar caminatas seguras, observar fauna y desconectarte en entornos naturales.</p>
-          <div class="meta"><span>Aventura</span><span>4 min</span></div>
-        </div>
-      </article>
 
-      <article class="blog-post cultura" data-reveal>
-        <div class="post-image-wrap">
-          <img src="../Img/7.jpg" alt="Calles históricas de ciudad" class="post-image">
-          <span class="post-badge">Editorial</span>
+        <div class="col-lg-6">
+          <article class="blog-post card cultura" data-category="cultura">
+            <img src="../Img/7.jpg" class="card-img-top" alt="Calles históricas de ciudad">
+            <div class="card-body">
+              <span class="badge bg-primary">Cultura</span>
+              <h5 class="card-title">Ciudades con historia y patrimonio</h5>
+              <p class="card-text">Crónicas de plazas centenarias, museos escondidos y paseos fotográficos por el casco antiguo.</p>
+              <div class="meta text-muted"><span>Cultura</span><span>6 min</span></div>
+            </div>
+          </article>
         </div>
-        <div class="post-body">
-          <span class="tag-pill">Cultura</span>
-          <h2>Ciudades con historia y patrimonio</h2>
-          <p>Crónicas de plazas centenarias, museos escondidos y paseos fotográficos por el casco antiguo.</p>
-          <div class="meta"><span>Cultura</span><span>6 min</span></div>
-        </div>
-      </article>
+      </div>
     </section>
 
-    <section class="comments-section" aria-labelledby="comments-title">
-      <div class="section-title">
+    <section class="comments-section mb-5" aria-labelledby="comments-title">
+      <div class="section-title text-center mb-4">
         <h2 id="comments-title">Comentarios de viajeros</h2>
         <p>Historias reales de viajeros y aventuras que inspiran tu próximo destino.</p>
       </div>
-      <div class="comments-grid">
-        <article class="comment-card" data-reveal>
-          <div class="comment-avatar" aria-hidden="true"></div>
-          <div>
-            <strong>Laura M.</strong>
-            <p>El itinerario superó mis expectativas: cada detalle estaba bien planificado y el contenido del blog fue clave.</p>
-          </div>
-        </article>
-        <article class="comment-card" data-reveal>
-          <div class="comment-avatar" aria-hidden="true"></div>
-          <div>
-            <strong>Carlos R.</strong>
-            <p>La guía de viaje me ayudó a elegir actividades únicas en montaña. El formato editorial fue muy atractivo.</p>
-          </div>
-        </article>
-        <article class="comment-card" data-reveal>
-          <div class="comment-avatar" aria-hidden="true"></div>
-          <div>
-            <strong>Ana P.</strong>
-            <p>Las recomendaciones culturales, el diseño y la navegación con teclado hicieron que todo fuera muy cómodo.</p>
-          </div>
-        </article>
+      <div class="comments-grid row g-4">
+        <div class="col-md-4">
+          <article class="comment-card card p-3">
+            <div class="d-flex">
+              <div class="comment-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>Laura M.</strong>
+                <p class="mb-0">El itinerario superó mis expectativas: cada detalle estaba bien planificado y el contenido del blog fue clave.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="comment-card card p-3">
+            <div class="d-flex">
+              <div class="comment-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>Carlos R.</strong>
+                <p class="mb-0">La guía de viaje me ayudó a elegir actividades únicas en montaña. El formato editorial fue muy atractivo.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="comment-card card p-3">
+            <div class="d-flex">
+              <div class="comment-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px;"><i class="fas fa-user"></i></div>
+              <div>
+                <strong>Ana P.</strong>
+                <p class="mb-0">Las recomendaciones culturales, el diseño y la navegación con teclado hicieron que todo fuera muy cómodo.</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -163,9 +191,9 @@
       <div class="footer-box">
         <h4>Redes</h4>
         <div class="social-links">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram"><span class="sprite sprite-instagram" aria-hidden="true"></span>Instagram</a>
+          <a href="#" aria-label="Facebook"><span class="sprite sprite-facebook" aria-hidden="true"></span>Facebook</a>
+          <a href="#" aria-label="Twitter"><span class="sprite sprite-twitter" aria-hidden="true"></span>Twitter</a>
         </div>
       </div>
     </div>

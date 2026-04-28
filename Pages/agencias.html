@@ -3,119 +3,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agencias | Turismo</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <title>Agencias | Turismo UNJu</title>
+  <link rel="stylesheet" href="../Css/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="../scripts/jquery-4.0.0.min.js"></script>
+  <script src="../Css/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/main.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="brand" href="../index.html">Turismo<span>UNJu</span></a>
-      <nav aria-label="Menú principal">
-        <ul class="main-nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./destinos.html">Destinos</a></li>
-          <li><a href="./agencias.html">Agencias</a></li>
-          <li><a href="./precios.html">Precios</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><a href="./contacto.html">Contacto</a></li>
-          <li><button class="theme-toggle" type="button" aria-label="Cambiar tema">Dark / Light</button></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="fas fa-plane"></i> Turismo <span>UNJu</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./agencias.html"><i class="fas fa-building"></i> Agencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./precios.html"><i class="fas fa-dollar-sign"></i> Precios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./blog.html"><i class="fas fa-blog"></i> Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+          </li>
         </ul>
-      </nav>
+        <button class="theme-toggle btn btn-outline-light ms-3" type="button" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section class="page-banner">
+  <main class="container my-5">
+    <section class="page-banner text-center mb-5">
       <h1>Agencias con personalidad</h1>
       <p>Perfiles de agencias con servicios, valoraciones y detalles claros para reservar con confianza.</p>
     </section>
 
-    <section>
-      <div class="section-title">
+    <section class="mb-5">
+      <div class="section-title text-center mb-4">
         <span class="section-caption">Perfiles</span>
         <h2>Agencias destacadas</h2>
         <p>Explora agencias que ofrecen viajes personalizados, atención local y guías certificados.</p>
       </div>
-      <div class="profile-grid">
-        <article class="profile-card" tabindex="0">
-          <div class="flip-card">
-            <div class="flip-front">
-              <img src="../Img/4.jpg" alt="Agencia Horizonte">
-              <div class="card-content">
-                <h3>Horizonte Tours</h3>
-                <p>Especialistas en viajes culturales y experiencias patrimoniales.</p>
-                <div class="rating" aria-label="Calificación 4 de 5 estrellas">
-                  <span></span><span></span><span></span><span></span><span></span>
+      <div class="profile-grid row g-4">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <article class="profile-card flip-card-container" tabindex="0">
+            <div class="flip-card">
+              <div class="flip-front card">
+                <img src="../Img/4.jpg" class="card-img-top" alt="Agencia Horizonte">
+                <div class="card-body">
+                  <h5 class="card-title">Horizonte Tours</h5>
+                  <p class="card-text">Especialistas en viajes culturales y experiencias patrimoniales.</p>
+                  <div class="rating" data-rating="4" aria-label="Calificación 4 de 5 estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back card">
+                <div class="card-body">
+                  <h5>Detalles</h5>
+                  <p>Asesoramiento 24/7, paquetes flexibles y viajes con guía de habla hispana.</p>
+                  <p><strong>Contacto:</strong> info@horizontetours.com</p>
                 </div>
               </div>
             </div>
-            <div class="flip-back">
-              <h4>Detalles</h4>
-              <p>Asesoramiento 24/7, paquetes flexibles y viajes con guía de habla hispana.</p>
-              <p><strong>Contacto:</strong> info@horizontetours.com</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <article class="profile-card" tabindex="0">
-          <div class="flip-card">
-            <div class="flip-front">
-              <img src="../Img/2.jpg" alt="Agencia Solara">
-              <div class="card-content">
-                <h3>Solara Viajes</h3>
-                <p>Operadora líder para escapadas de sol y experiencias en la costa.</p>
-                <div class="rating" aria-label="Calificación 5 de 5 estrellas">
-                  <span></span><span></span><span></span><span></span><span></span>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <article class="profile-card flip-card-container" tabindex="0">
+            <div class="flip-card">
+              <div class="flip-front card">
+                <img src="../Img/2.jpg" class="card-img-top" alt="Agencia Solara">
+                <div class="card-body">
+                  <h5 class="card-title">Solara Viajes</h5>
+                  <p class="card-text">Operadora líder para escapadas de sol y experiencias en la costa.</p>
+                  <div class="rating" data-rating="5" aria-label="Calificación 5 de 5 estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back card">
+                <div class="card-body">
+                  <h5>Logística</h5>
+                  <p>Traslados, estadías boutique y actividades seguras para toda la familia.</p>
+                  <p><strong>Contacto:</strong> hola@solaraviajes.com</p>
                 </div>
               </div>
             </div>
-            <div class="flip-back">
-              <h4>Logística</h4>
-              <p>Traslados, estadías boutique y actividades seguras para toda la familia.</p>
-              <p><strong>Contacto:</strong> hola@solaraviajes.com</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <article class="profile-card" tabindex="0">
-          <div class="flip-card">
-            <div class="flip-front">
-              <img src="../Img/3.jpg" alt="Agencia Terraviva">
-              <div class="card-content">
-                <h3>Terraviva</h3>
-                <p>Rutas de naturaleza, trekking y expediciones photography-friendly.</p>
-                <div class="rating" aria-label="Calificación 4 de 5 estrellas">
-                  <span></span><span></span><span></span><span></span><span></span>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <article class="profile-card flip-card-container" tabindex="0">
+            <div class="flip-card">
+              <div class="flip-front card">
+                <img src="../Img/3.jpg" class="card-img-top" alt="Agencia Terraviva">
+                <div class="card-body">
+                  <h5 class="card-title">Terraviva</h5>
+                  <p class="card-text">Rutas de naturaleza, trekking y expediciones photography-friendly.</p>
+                  <div class="rating" data-rating="4" aria-label="Calificación 4 de 5 estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back card">
+                <div class="card-body">
+                  <h5>Servicios</h5>
+                  <p>Itinerarios sostenibles, guías locales y soporte digital 24 horas.</p>
+                  <p><strong>Contacto:</strong> hola@terraviva.com</p>
                 </div>
               </div>
             </div>
-            <div class="flip-back">
-              <h4>Servicios</h4>
-              <p>Itinerarios sostenibles, guías locales y soporte digital 24 horas.</p>
-              <p><strong>Contacto:</strong> hola@terraviva.com</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
 
-        <article class="profile-card" tabindex="0">
-          <div class="flip-card">
-            <div class="flip-front">
-              <img src="../Img/10.jpg" alt="Agencia Gastrum">
-              <div class="card-content">
-                <h3>Gastrum</h3>
-                <p>Experiencias gourmet en destinos culturales y mercados emblemáticos.</p>
-                <div class="rating" aria-label="Calificación 5 de 5 estrellas">
-                  <span></span><span></span><span></span><span></span><span></span>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <article class="profile-card flip-card-container" tabindex="0">
+            <div class="flip-card">
+              <div class="flip-front card">
+                <img src="../Img/10.jpg" class="card-img-top" alt="Agencia Gastrum">
+                <div class="card-body">
+                  <h5 class="card-title">Gastrum</h5>
+                  <p class="card-text">Experiencias gourmet en destinos culturales y mercados emblemáticos.</p>
+                  <div class="rating" data-rating="5" aria-label="Calificación 5 de 5 estrellas">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="flip-back card">
+                <div class="card-body">
+                  <h5>Valor agregado</h5>
+                  <p>Degustaciones exclusivas, talleres con chefs y rutas culinarias privadas.</p>
+                  <p><strong>Contacto:</strong> reservas@gastrum.com</p>
                 </div>
               </div>
             </div>
-            <div class="flip-back">
-              <h4>Valor agregado</h4>
-              <p>Degustaciones exclusivas, talleres con chefs y rutas culinarias privadas.</p>
-              <p><strong>Contacto:</strong> reservas@gastrum.com</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -137,9 +173,9 @@
       <div class="footer-box">
         <h4>Síguenos</h4>
         <div class="social-links">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Twitter">TW</a>
+          <a href="#" aria-label="Instagram"><span class="sprite sprite-instagram" aria-hidden="true"></span>Instagram</a>
+          <a href="#" aria-label="Facebook"><span class="sprite sprite-facebook" aria-hidden="true"></span>Facebook</a>
+          <a href="#" aria-label="Twitter"><span class="sprite sprite-twitter" aria-hidden="true"></span>Twitter</a>
         </div>
       </div>
     </div>

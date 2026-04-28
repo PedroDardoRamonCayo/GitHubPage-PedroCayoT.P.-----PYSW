@@ -3,134 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto | Turismo</title>
-  <link rel="stylesheet" href="../Css/style.css">
+  <title>Contacto | Turismo UNJu</title>
+  <link rel="stylesheet" href="../Css/bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="../scripts/jquery-4.0.0.min.js"></script>
+  <script src="../Css/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/main.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <a class="brand" href="../index.html">Turismo<span>UNJu</span></a>
-      <nav aria-label="Menú principal">
-        <ul class="main-nav">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./destinos.html">Destinos</a></li>
-          <li><a href="./agencias.html">Agencias</a></li>
-          <li><a href="./precios.html">Precios</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-          <li><button class="theme-toggle" type="button" aria-label="Cambiar tema">Dark / Light</button></li>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"><i class="fas fa-plane"></i> Turismo <span>UNJu</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./agencias.html"><i class="fas fa-building"></i> Agencias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./precios.html"><i class="fas fa-dollar-sign"></i> Precios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./blog.html"><i class="fas fa-blog"></i> Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+          </li>
         </ul>
-      </nav>
+        <button class="theme-toggle btn btn-outline-light ms-3" type="button" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main class="container">
-    <section class="page-banner">
+  <main class="container my-5">
+    <section class="page-banner text-center mb-5">
       <h1>Contacto avanzado</h1>
       <p>Formulario para planificar tu viaje con atención personalizada y envío rápido de tu solicitud.</p>
     </section>
 
-    <section class="contact-grid">
-      <article class="form-card" data-reveal>
-        <form id="contact-form" class="subscribe-form" novalidate>
-          <fieldset class="field-group">
-            <legend>Planifica tu viaje</legend>
-            <div class="field-grid">
-              <label for="name">
-                Nombre completo
-                <input id="name" type="text" name="name" required minlength="3" placeholder="Ej. María Pérez">
-                <span class="field-hint">Introduce tu nombre completo.</span>
-              </label>
-              <label for="email">
-                Correo electrónico
-                <input id="email" type="email" name="email" required placeholder="ejemplo@mail.com">
-                <span class="field-hint">Necesitamos un correo válido para contactarte.</span>
-              </label>
+    <section class="contact-grid row g-4 mb-5">
+      <div class="col-lg-8">
+        <article class="form-card card p-4">
+          <form id="contact-form" class="needs-validation" novalidate>
+            <fieldset class="field-group">
+              <legend class="h4 mb-4">Planifica tu viaje</legend>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Nombre completo</label>
+                  <input id="name" type="text" name="name" class="form-control" required minlength="3" placeholder="Ej. María Pérez">
+                  <div class="invalid-feedback">Introduce tu nombre completo (mínimo 3 caracteres).</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <input id="email" type="email" name="email" class="form-control" required placeholder="ejemplo@mail.com">
+                  <div class="invalid-feedback">Necesitamos un correo válido para contactarte.</div>
+                </div>
+              </div>
+
+              <div class="row g-3 mt-2">
+                <div class="col-md-6">
+                  <label for="origin" class="form-label">Origen</label>
+                  <input id="origin" type="text" name="origin" class="form-control" required placeholder="Ciudad / Región">
+                  <div class="invalid-feedback">Indica el lugar desde donde viajarás.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="destination" class="form-label">Destino de interés</label>
+                  <select id="destination" name="destination" class="form-select" required>
+                    <option value="" disabled selected hidden>Selecciona</option>
+                    <option value="cultural">Ruta cultural</option>
+                    <option value="naturaleza">Naturaleza</option>
+                    <option value="playa">Sol y playa</option>
+                    <option value="gastronomia">Gastronomía</option>
+                  </select>
+                  <div class="invalid-feedback">Selecciona un destino para tu plan.</div>
+                </div>
+              </div>
+
+              <div class="mt-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" rows="5" class="form-control" required placeholder="Cuéntanos tus fechas, presupuesto y preferencias."></textarea>
+                <div class="invalid-feedback">Cuéntanos tus fechas, presupuesto y preferencias.</div>
+              </div>
+            </fieldset>
+
+            <div class="submit-group mt-4">
+              <button type="submit" class="btn btn-primary btn-icon">
+                <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                Enviar solicitud
+              </button>
+              <p class="form-note mt-2">Los campos marcados necesitan atención antes de enviar.</p>
             </div>
+          </form>
+        </article>
+      </div>
 
-            <div class="field-grid">
-              <label for="origin">
-                Origen
-                <input id="origin" type="text" name="origin" required placeholder="Ciudad / Región">
-                <span class="field-hint">Indica el lugar desde donde viajarás.</span>
-              </label>
-              <label for="destination">
-                Destino de interés
-                <select id="destination" name="destination" required>
-                  <option value="" disabled selected hidden>Selecciona</option>
-                  <option value="cultural">Ruta cultural</option>
-                  <option value="naturaleza">Naturaleza</option>
-                  <option value="playa">Sol y playa</option>
-                  <option value="gastronomia">Gastronomía</option>
-                </select>
-                <span class="field-hint">Selecciona un destino para tu plan.</span>
-              </label>
-            </div>
-
-            <label for="message">
-              Mensaje
-              <textarea id="message" name="message" rows="5" required placeholder="Cuéntanos tus fechas, presupuesto y preferencias."></textarea>
-              <span class="field-hint">Cuéntanos tus fechas, presupuesto y preferencias.</span>
-            </label>
-          </fieldset>
-
-          <div class="submit-group">
-            <button type="submit">Enviar solicitud</button>
-            <p class="form-note">Los campos en rojo necesitan atención antes de enviar.</p>
+      <div class="col-lg-4">
+        <aside class="contact-panel">
+          <div class="info-box card p-3 mb-3">
+            <h5>Atención a viajeros</h5>
+            <p>Rellena el formulario y uno de nuestros asesores diseñará un paquete según tus necesidades.</p>
           </div>
-        </form>
-      </article>
-
-      <aside class="contact-panel" data-reveal>
-        <article class="info-box">
-          <h4>Atención a viajeros</h4>
-          <p>Rellena el formulario y uno de nuestros asesores diseñará un paquete según tus necesidades.</p>
-        </article>
-        <article class="info-box">
-          <h4>Contacto directo</h4>
-          <p><strong>Email:</strong> soporte@turismo.unju.edu.ar</p>
-          <p><strong>Teléfono:</strong> +54 388 555 1234</p>
-          <p><strong>Horario:</strong> Lun a Vie, 09:00 - 18:00</p>
-        </article>
-        <article class="info-box">
-          <h4>Consejos rápidos</h4>
-          <ul>
-            <li>Guarda tus fechas flexibles.</li>
-            <li>Indica tu presupuesto aproximado.</li>
-            <li>Menciona si viajas con familia o amigos.</li>
-          </ul>
-        </article>
-      </aside>
+          <div class="info-box card p-3 mb-3">
+            <h5>Contacto directo</h5>
+            <p><strong>Email:</strong> soporte@turismo.unju.edu.ar</p>
+            <p><strong>Teléfono:</strong> +54 388 555 1234</p>
+            <p><strong>Horario:</strong> Lun a Vie, 09:00 - 18:00</p>
+          </div>
+          <div class="info-box card p-3">
+            <h5>Consejos rápidos</h5>
+            <ul class="list-unstyled">
+              <li>Guarda tus fechas flexibles.</li>
+              <li>Indica tu presupuesto aproximado.</li>
+              <li>Menciona si viajas con familia o amigos.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </section>
 
-    <section class="help-section" aria-labelledby="help-title">
-      <div class="section-title">
-        <span>Soporte adicional</span>
+    <section class="help-section mb-5">
+      <div class="section-title text-center mb-4">
+        <span class="section-caption">Soporte adicional</span>
         <h2 id="help-title">Información útil para tu viaje</h2>
         <p>Consejos y recursos prácticos para completar tu reserva con confianza.</p>
       </div>
-      <div class="help-cards">
-        <article class="footer-box">
-          <h4>Preguntas frecuentes</h4>
-          <p>Resuelve dudas sobre reservas, política de cambios y protocolos de viaje.</p>
-        </article>
-        <article class="footer-box">
-          <h4>Consejos de viaje</h4>
-          <p>Descubre cómo elegir destino, ahorrar en transporte y vivir experiencias únicas.</p>
-        </article>
-        <article class="footer-box">
-          <h4>Asesor personalizado</h4>
-          <p>Contacta con un experto para crear un itinerario a medida y obtener apoyo inmediato.</p>
-        </article>
+      <div class="help-cards row g-4">
+        <div class="col-md-4">
+          <article class="card p-3 text-center">
+            <h5>Preguntas frecuentes</h5>
+            <p>Resuelve dudas sobre reservas, política de cambios y protocolos de viaje.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card p-3 text-center">
+            <h5>Consejos de viaje</h5>
+            <p>Descubre cómo elegir destino, ahorrar en transporte y vivir experiencias únicas.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card p-3 text-center">
+            <h5>Asesor personalizado</h5>
+            <p>Contacta con un experto para crear un itinerario a medida y obtener apoyo inmediato.</p>
+          </article>
+        </div>
       </div>
     </section>
   </main>
 
-  <div class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal">
-      <div class="spinner" aria-hidden="true"></div>
-      <h2>Enviando mensaje</h2>
-      <p>Estamos procesando tu solicitud. Un momento por favor...</p>
-      <button class="cta-button modal-close" type="button">Cerrar</button>
+  <!-- Modal de confirmación -->
+  <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmationModalLabel">Mensaje enviado</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Gracias por contactarnos. Hemos recibido tu mensaje y pronto un asesor se comunicará contigo.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
     </div>
   </div>
 

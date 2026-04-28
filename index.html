@@ -4,50 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Turismo UNJu | Home</title>
+  <link rel="stylesheet" href="Css/bootstrap-5.3.8-dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="Css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="scripts/jquery-4.0.0.min.js"></script>
+  <script src="Css/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/main.js"></script>
 </head>
 <body>
   <div class="site-shell">
     <header class="site-header">
-      <div class="brand">
-        <a href="index.html">Turismo <span>UNJu</span></a>
-      </div>
-      <button class="theme-toggle" type="button" aria-label="Cambiar tema">🌙</button>
-      <nav class="main-nav" aria-label="Navegación principal">
-        <ul class="nav-list">
-          <li><a href="Pages/destinos.html">Destinos</a></li>
-          <li><a href="Pages/agencias.html">Agencias</a></li>
-          <li><a href="Pages/precios.html">Precios</a></li>
-          <li><a href="Pages/blog.html">Blog</a></li>
-          <li><a href="Pages/contacto.html">Contacto</a></li>
-        </ul>
-        <div class="mega-menu" aria-label="Mega menú de turismo">
-          <article>
-            <h2>Experiencias</h2>
-            <ul>
-              <li><a href="Pages/destinos.html#cultural">Cultural</a></li>
-              <li><a href="Pages/destinos.html#naturaleza">Naturaleza</a></li>
-              <li><a href="Pages/destinos.html#playa">Sol y Playa</a></li>
-              <li><a href="Pages/destinos.html#gastronomia">Gastronómico</a></li>
-              <li><a href="Pages/destinos.html#religioso">Religioso</a></li>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><i class="fas fa-plane"></i> Turismo <span>UNJu</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Pages/destinos.html"><i class="fas fa-map-marker-alt"></i> Destinos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Pages/agencias.html"><i class="fas fa-building"></i> Agencias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Pages/precios.html"><i class="fas fa-dollar-sign"></i> Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Pages/blog.html"><i class="fas fa-blog"></i> Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Pages/contacto.html"><i class="fas fa-envelope"></i> Contacto</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="megaMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-bars"></i> Más
+                </a>
+                <ul class="dropdown-menu mega-menu" aria-labelledby="megaMenu">
+                  <li><h6 class="dropdown-header">Experiencias</h6></li>
+                  <li><a class="dropdown-item" href="Pages/destinos.html#cultural"><i class="fas fa-landmark"></i> Cultural</a></li>
+                  <li><a class="dropdown-item" href="Pages/destinos.html#naturaleza"><i class="fas fa-tree"></i> Naturaleza</a></li>
+                  <li><a class="dropdown-item" href="Pages/destinos.html#playa"><i class="fas fa-umbrella-beach"></i> Sol y Playa</a></li>
+                  <li><a class="dropdown-item" href="Pages/destinos.html#gastronomia"><i class="fas fa-utensils"></i> Gastronómico</a></li>
+                  <li><a class="dropdown-item" href="Pages/destinos.html#religioso"><i class="fas fa-pray"></i> Religioso</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><h6 class="dropdown-header">Agencias</h6></li>
+                  <li><a class="dropdown-item" href="Pages/agencias.html">Tours exclusivos</a></li>
+                  <li><a class="dropdown-item" href="Pages/agencias.html">Planes familiares</a></li>
+                  <li><a class="dropdown-item" href="Pages/agencias.html">Reservas y eventos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><h6 class="dropdown-header">Ofertas</h6></li>
+                  <li><a class="dropdown-item" href="Pages/precios.html">Paquetes 2026</a></li>
+                  <li><a class="dropdown-item" href="Pages/precios.html">Destinos premium</a></li>
+                  <li><a class="dropdown-item" href="Pages/precios.html">Descuentos especiales</a></li>
+                </ul>
+              </li>
             </ul>
-          </article>
-          <article>
-            <h2>Agencias</h2>
-            <ul>
-              <li><a href="Pages/agencias.html">Tours exclusivos</a></li>
-              <li><a href="Pages/agencias.html">Planes familiares</a></li>
-              <li><a href="Pages/agencias.html">Reservas y eventos</a></li>
-            </ul>
-          </article>
-          <article>
-            <h2>Ofertas</h2>
-            <ul>
-              <li><a href="Pages/precios.html">Paquetes 2026</a></li>
-              <li><a href="Pages/precios.html">Destinos premium</a></li>
-              <li><a href="Pages/precios.html">Descuentos especiales</a></li>
-            </ul>
-          </article>
+            <button class="theme-toggle btn btn-outline-light ms-3" type="button" aria-label="Cambiar tema"><i class="fas fa-moon"></i></button>
+            <button class="btn btn-warning ms-3" data-bs-toggle="modal" data-bs-target="#phishingModal"><i class="fas fa-shield-alt"></i> Simulación de phishing</button>
+          </div>
         </div>
       </nav>
     </header>
@@ -131,31 +147,35 @@
           <span>Testimonios</span>
           <h2 id="testimonios-title">Historias de viajeros</h2>
         </div>
-        <div class="carousel">
-          <input type="radio" name="testimonial" id="testimonial-1" checked>
-          <input type="radio" name="testimonial" id="testimonial-2">
-          <input type="radio" name="testimonial" id="testimonial-3">
-
-          <div class="carousel-panels">
-            <article class="panel panel-1">
-              <p>"El viaje cultural superó todas mis expectativas. El guía conocía cada detalle y las comidas eran inolvidables."</p>
-              <h3>María López</h3>
-            </article>
-            <article class="panel panel-2">
-              <p>"Un servicio impecable y paisajes que parecían salidos de una postal. Recomiendo el tour de aventura."</p>
-              <h3>Lucas Martínez</h3>
-            </article>
-            <article class="panel panel-3">
-              <p>"El carrusel de experiencias fue perfecto, desde la reserva hasta el retorno. Volveré con mi familia."</p>
-              <h3>Ana Paredes</h3>
-            </article>
+        <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <article class="panel">
+                <p>"El viaje cultural superó todas mis expectativas. El guía conocía cada detalle y las comidas eran inolvidables."</p>
+                <h3>María López</h3>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="panel">
+                <p>"Un servicio impecable y paisajes que parecían salidos de una postal. Recomiendo el tour de aventura."</p>
+                <h3>Lucas Martínez</h3>
+              </article>
+            </div>
+            <div class="carousel-item">
+              <article class="panel">
+                <p>"El carrusel de experiencias fue perfecto, desde la reserva hasta el retorno. Volveré con mi familia."</p>
+                <h3>Ana Paredes</h3>
+              </article>
+            </div>
           </div>
-
-          <div class="carousel-controls" aria-label="Seleccionar testimonio">
-            <label for="testimonial-1"></label>
-            <label for="testimonial-2"></label>
-            <label for="testimonial-3"></label>
-          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
       </section>
 
@@ -193,15 +213,15 @@
           <form id="newsletter-form" class="newsletter-form" aria-label="Formulario de suscripción">
             <label for="newsletter-email">Correo electrónico</label>
             <input id="newsletter-email" type="email" name="email" placeholder="tu@correo.com" required>
-            <button type="submit" class="btn btn-primary">Suscribirse</button>
+            <button type="submit" class="btn btn-primary btn-icon">Suscribirse</button>
           </form>
         </div>
         <div class="footer-links">
           <h3>Síguenos</h3>
           <ul class="social-links">
-            <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">Instagram</a></li>
-            <li><a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">Facebook</a></li>
-            <li><a href="https://www.tiktok.com/" target="_blank" aria-label="TikTok">TikTok</a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><span class="sprite sprite-instagram" aria-hidden="true"></span>Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><span class="sprite sprite-facebook" aria-hidden="true"></span>Facebook</a></li>
+            <li><a href="https://www.twitter.com/" target="_blank" aria-label="Twitter"><span class="sprite sprite-twitter" aria-hidden="true"></span>Twitter</a></li>
           </ul>
         </div>
         <div class="footer-map">
@@ -221,6 +241,56 @@
       <div class="spinner" aria-hidden="true"></div>
       <h2>Envío en progreso</h2>
       <p>Estamos procesando tu solicitud. Gracias por confiar en nosotros.</p>
+    </div>
+  </div>
+
+  <!-- Modal de Phishing -->
+  <div class="modal fade" id="phishingModal" tabindex="-1" aria-labelledby="phishingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="phishingModalLabel"><i class="fas fa-exclamation-triangle text-warning"></i> Simulación Educativa de Phishing</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-warning">
+            <strong>Advertencia:</strong> Esta es una simulación educativa. NO se roban datos reales. Aprende a identificar señales de fraude.
+          </div>
+          <h6>Ejemplos de Señales de Fraude:</h6>
+          <ul>
+            <li>Correos de bancos pidiendo actualizar datos personales.</li>
+            <li>Enlaces sospechosos que no coinciden con el dominio oficial.</li>
+            <li>Urgencia para actuar inmediatamente.</li>
+            <li>Errores gramaticales o diseño pobre.</li>
+          </ul>
+          <div id="phishing-quiz">
+            <p><strong>¿Cuál de estos es un ejemplo de phishing?</strong></p>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="phishing-option" id="option1" value="safe">
+              <label class="form-check-label" for="option1">
+                Un email de tu banco con tu nombre correcto pidiendo verificar cuenta.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="phishing-option" id="option2" value="phishing">
+              <label class="form-check-label" for="option2">
+                Un email urgente de "support@amaz0n.com" pidiendo actualizar contraseña.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="phishing-option" id="option3" value="safe">
+              <label class="form-check-label" for="option3">
+                Una llamada de tu agencia de viajes confirmando reserva.
+              </label>
+            </div>
+            <button id="check-answer" class="btn btn-primary mt-3">Verificar Respuesta</button>
+            <div id="feedback" class="mt-3"></div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
     </div>
   </div>
 
